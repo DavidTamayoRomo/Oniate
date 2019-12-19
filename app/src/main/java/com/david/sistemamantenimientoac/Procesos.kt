@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 
 class Procesos : AppCompatActivity() {
 
@@ -14,6 +15,7 @@ class Procesos : AppCompatActivity() {
         var btnCarga = findViewById<Button>(R.id.btnCarga)
         var btnDescarga = findViewById<Button>(R.id.btnDescarga)
         var btnVacio = findViewById<Button>(R.id.btnVacio)
+        var btnReporte = findViewById<Button>(R.id.btnReporte)
 
         btnCarga.setOnClickListener {
             val intent = Intent(this, Carga::class.java)
@@ -29,6 +31,12 @@ class Procesos : AppCompatActivity() {
             val intent = Intent(this, PruebaDeVacio::class.java)
             startActivity(intent)
         }
+
+        btnReporte.setOnClickListener {
+            Toast.makeText(this,"Vehiculo Creado", Toast.LENGTH_LONG).show()
+        }
+
+
 
     }
 }
